@@ -2,6 +2,9 @@ import React from 'react'
 import Container from './Container'
 import Logo from './Logo'
 import HeaderMenu from './HeaderMenu'
+import SearchBar from './SearchBar'
+import CartIcon from './CartIcon'
+import FavouriteIcon from './FavouriteIcon'
 
 const Header = () => {
   return (
@@ -12,7 +15,12 @@ const Header = () => {
             {/* Header menu  */}
             <HeaderMenu/>   
             {/* user icon  */}
-            <div>Icon</div>
+            <div className="w-auto md:w-1/3 flex items-center justify-end gap-4">
+                <SearchBar/>
+                <FavouriteIcon/>
+                <CartIcon/>
+                <button className='bg-darkRed text-white rounded-md py-2 px-4 hover:bg-darkRed/80'>login</button>
+            </div>
         </Container>
     </header>
   )
