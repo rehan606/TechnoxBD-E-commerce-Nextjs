@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/ourcomponents/Header";
+import Footer from "@/components/ourcomponents/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TechnoxBD Ecommerce",
+  title: "TechnoxBD ",
   description: "Ecommerce Web application built with Next.js and Tailwind CSS",
 };
 
@@ -27,7 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-poppins`}
       >
+        <Header />
+
         {children}
+
+        <Footer />
       </body>
     </html>
   );
