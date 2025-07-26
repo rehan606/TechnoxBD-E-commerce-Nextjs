@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --font-poppins: 'Poppins', sans-serif;
+    --color-shop-light-green: #3b9c3c; /* Example light green color */
+    --color-darkColor: #151515; /* Example dark color */
+    --color-lightColor: #52525b; /* Example light color */
+    --color-lightGreen: #93D991; /* Example light gray color */
+    --color-lightBlue: #6c7fd8; /* Example light blue color */
+    --color-lightOrange: #fca99b; /* Example light orange color */
+    --color-darkBlue: #1e3a8a; /* Example dark blue color */
+    --color-darkRed: #F02757; /* Example dark red color */
+
+    --color-lightBg: #F8F8F8; /* Example light background color */
+    --color-darkBg: #1F2937; /* Example dark background color */
+    --color-productBg: #f1f3f8; /* Example product background color */
+
+    --color-lightText: #ababab; /* Example light text color */
+    --color-darkText: #686e7d; /* Example dark text color */
+    --color-productBorder: #E5E7EB; /* Example product border color */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
