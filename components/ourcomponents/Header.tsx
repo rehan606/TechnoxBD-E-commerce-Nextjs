@@ -5,13 +5,17 @@ import HeaderMenu from './HeaderMenu'
 import SearchBar from './SearchBar'
 import CartIcon from './CartIcon'
 import FavouriteIcon from './FavouriteIcon'
+import MobileMenu from './MobileMenu'
 
 const Header = () => {
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm py-5 ">
         <Container className='flex items-center justify-between gap-7 text-lightText'>
             {/* Logo / Brand Name */}
-            <Logo/>     
+            <div className="w-auto md:w-1/3 flex items-center justify-start gap-2.5">
+              <MobileMenu/>
+              <Logo/>       
+            </div>
             {/* Header menu  */}
             <HeaderMenu/>   
             {/* user icon  */}
