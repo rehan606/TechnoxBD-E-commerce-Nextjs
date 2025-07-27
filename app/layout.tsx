@@ -4,6 +4,12 @@ import "./globals.css";
 import Header from "@/components/ourcomponents/Header";
 import Footer from "@/components/ourcomponents/Footer";
 
+// Clerk Router
+import {
+  ClerkProvider,
+} from '@clerk/nextjs'
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,16 +31,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-poppins`}
-      >
-        <Header />
-
-        {children}
-
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-poppins`}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
