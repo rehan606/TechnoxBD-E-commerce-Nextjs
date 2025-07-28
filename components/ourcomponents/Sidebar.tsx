@@ -4,6 +4,7 @@ import React from 'react'
 import Logo from './Logo'
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import SocialLinks from './SocialLinks';
 
 interface SidebarProps {
   isOpen: boolean;  // Prop to control the visibility of the sidebar
@@ -19,7 +20,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <div className="min-w-72 max-w-96 bg-black h-full text-white p-10 border-r border-r-darkRed flex flex-col gap-6">
                 <div className="flex items-center justify-between">
                     <Logo className="text-white" subClass="group-hover:text-white"/>
-                    <button onClick={onClose} className="hover:text-darkRed hoverEffect border border-gray-100 py-1 px-3 ">X</button>   
+                    <button onClick={onClose} className="hover:text-darkRed hoverEffect border border-gray-100 py-1 px-3 cursor-pointer">X</button>   
                 </div>
 
                 <div className="flex flex-col gap-4 text-base font-semibold capitalize text-white/80 tracking-wide">
@@ -36,6 +37,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         </Link>
                     ))}
                 </div>
+
+                {/* Social Links */}
+                <SocialLinks />
 
             </div>
 
