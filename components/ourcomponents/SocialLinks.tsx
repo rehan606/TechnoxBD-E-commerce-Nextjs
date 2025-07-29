@@ -44,11 +44,12 @@ const SocialLinks = ({className, iconClassName, tooltipClassName }: Props) => {
                 { socialLink.map((item) => (
                     <Tooltip key={item.name}>
                         <TooltipTrigger>
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" className={cn("p-2 border rounded-full hover:border-darkRed hover:text-white hoverEffect",iconClassName )}>
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-red-400"  >
+                                {/* className="p-2 border rounded-full hover:border-red-400 hover:text-white hoverEffect" */}
                                 {item.icon}
                             </a> 
                         </TooltipTrigger>
-                        <TooltipContent className={cn("bg-white text-darkColor font-semibold rounded-md p-2", tooltipClassName)}>
+                        <TooltipContent className={cn("bg-white text-darkColor font-semibold ", tooltipClassName)}>
                             {item.name}
                         </TooltipContent>
                     </Tooltip>
