@@ -6,9 +6,9 @@ import SearchBar from './SearchBar'
 import CartIcon from './CartIcon'
 import FavouriteIcon from './FavouriteIcon'
 import MobileMenu from './MobileMenu'
-import { auth, currentUser } from '@clerk/nextjs/server'
-import { UserIcon } from 'lucide-react'
-import { ClerkLoaded, SignedIn, SignInButton, UserButton } from '@clerk/nextjs'
+import { currentUser } from '@clerk/nextjs/server'
+import { ClerkLoaded, SignedIn,  UserButton } from '@clerk/nextjs'
+import SigninButtonComponent from './SigninButtonComponent'
 
 const Header = async() => {
 
@@ -37,7 +37,7 @@ const Header = async() => {
                     <UserButton/>  
                   </SignedIn>
                   { 
-                    !user && <SignInButton mode='modal'><button className='bg-darkRed text-sm font-semibold hover:text-darkColor text-white rounded-md py-2 px-4 hover:bg-darkRed/80 cursor-pointer'>login</button></SignInButton>
+                    !user && <SigninButtonComponent/>
                   }
                 </ClerkLoaded>
             </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/ourcomponents/Header";
 import Footer from "@/components/ourcomponents/Footer";
 
@@ -34,7 +34,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-poppins`}>
-          {/* <Header /> */}
+          <Header />
           {children}
           <Footer />
         </body>
