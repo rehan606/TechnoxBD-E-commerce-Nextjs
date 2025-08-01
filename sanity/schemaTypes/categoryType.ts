@@ -20,5 +20,31 @@ export const categoryType = defineType({
                 maxLength: 200,
             },
         }),
+        defineField({
+            name: "range",
+            type: "number",
+            description: "Starting from",
+        }),
+        defineField({
+            name: "featured",
+            type: "boolean",
+            initialValue: false,
+        }),
+        defineField({
+            name: "image",
+            title: "Category Image",
+            type: "image",
+            options: {
+                hotspot: true,
+            },
+        }),
+
     ],
+    preview: {
+        select: {
+            title: "title",
+            subtitle: "range",
+            media: "image",
+        },
+    },
 })
